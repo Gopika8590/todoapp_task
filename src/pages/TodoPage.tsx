@@ -61,28 +61,3 @@ export default TodoPage;
 
 
 
-{/*
-import React from 'react';
-
-const TodoList = () => {
-  const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
-
-  const deleteTask = (id: number) => {
-    const updatedTasks = tasks.filter((task: any) => task.id !== id);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-    
-  };
-
-  return (
-    <div>
-      {tasks.map((task: any) => (
-        <div key={task.id}>
-          <span>{task.title}</span>
-          <button onClick={() => deleteTask(task.id)}>Delete</button>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default TodoList;*/}

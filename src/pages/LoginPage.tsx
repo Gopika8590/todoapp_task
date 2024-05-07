@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -18,34 +18,32 @@ const LoginPage = () => {
   };
 
   return (
-    
     <div className='login-container'>
       <div className='login-card'>
-      <h1>Login</h1>
-      <form>
-        <div className='form-group'>
-      <input type="text" placeholder="Username" value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
-      <div className="signup-link">
-          <p>Not Registered? <a href="/signup">Sign up</a></p>
-      </div>
-      </div>
-      </form>
+        <h1>Login</h1>
+        <form>
+          <div className='form-group'>
+            <input 
+              type="text" 
+              placeholder="Username" 
+              value={username} 
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input 
+              type="password" 
+              placeholder="Password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handleLogin}>Login</button>
+          </div>
+        </form>
+        <div className="signup-link">
+          <p>Not Registered? <Link to="/signup">Sign up</Link></p>
+        </div>
       </div>
     </div>
   );
 };
 
 export default LoginPage;
-
-
-
-
